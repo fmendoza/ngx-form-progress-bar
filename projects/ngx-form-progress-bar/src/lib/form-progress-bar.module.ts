@@ -9,4 +9,4 @@ import { NgxFormProgressBarComponent } from './form-progress-bar.component';
   ],
   exports: [NgxFormProgressBarComponent]
 })
-export class NgxFormProgressBarComponentModule { }
+export class NgxFormProgressBarModule { }
