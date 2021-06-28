@@ -1,5 +1,5 @@
-import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
-import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ComponentFixture, inject, TestBed, waitForAsync } from '@angular/core/testing';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { NgxFormProgressBarComponent } from './form-progress-bar.component';
 
@@ -7,7 +7,7 @@ describe('NgxFormProgressBar', () => {
   let component: NgxFormProgressBarComponent;
   let fixture: ComponentFixture<NgxFormProgressBarComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [NgxFormProgressBarComponent],
       imports: [
@@ -32,6 +32,10 @@ describe('NgxFormProgressBar', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should pass a FormGroup instance', () => {
+    expect(component.form).toBeInstanceOf(FormGroup);
   });
 
   it('should return 50', () => {

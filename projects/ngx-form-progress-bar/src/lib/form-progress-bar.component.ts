@@ -32,23 +32,23 @@ import { Subscription } from 'rxjs';
 })
 export class NgxFormProgressBarComponent implements OnInit, OnDestroy {
 
-  @Input() form: FormGroup;
+  @Input() form!: FormGroup;
 
   public progress: number;
 
-  public formObserver: Subscription;
+  public formObserver!: Subscription;
 
   constructor() {
     this.progress = 0;
   }
 
   ngOnInit(): void {
-    this.formObserver = this.form.valueChanges
-      .subscribe(() => this.onFormChanged(this.form));
+    this.formObserver = this.form?.valueChanges
+    .subscribe(() => this.onFormChanged(this.form));
   }
 
   ngOnDestroy(): void {
-    this.formObserver.unsubscribe();
+    this.formObserver!.unsubscribe();
   }
 
   onFormChanged(form: FormGroup): void {
