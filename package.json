@@ -1,6 +1,17 @@
 {
   "name": "ngx-form-progress-form",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmendoza/ngx-form-progress-bar"
+  },
+  "keywords": [
+    "angular",
+    "form",
+    "progress-bar"
+  ],
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +19,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": false,
   "dependencies": {
     "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",

@@ -1,6 +1,16 @@
 {
   "name": "ngx-form-progress-bar",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmendoza/ngx-form-progress-bar"
+  },
+  "keywords": [
+    "angular",
+    "form",
+    "progress-bar"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": ">=9.0.0 <13.0.0",
     "@angular/core": ">=9.0.0 <13.0.0"
