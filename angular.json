@@ -58,7 +58,6 @@
             "main": "projects/ngx-form-progress-bar-tester/src/main.ts",
             "polyfills": "projects/ngx-form-progress-bar-tester/src/polyfills.ts",
             "tsConfig": "projects/ngx-form-progress-bar-tester/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-form-progress-bar-tester/src/favicon.ico",
               "projects/ngx-form-progress-bar-tester/src/assets"
@@ -66,7 +65,13 @@
             "styles": [
               "projects/ngx-form-progress-bar-tester/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -96,7 +101,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
