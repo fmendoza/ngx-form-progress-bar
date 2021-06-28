@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit {
   title = 'ngx-form-progress-bar-tester';
 
-  public form: FormGroup;
+  public form!: FormGroup;
 
   ngOnInit() {
     this.setupForm();
