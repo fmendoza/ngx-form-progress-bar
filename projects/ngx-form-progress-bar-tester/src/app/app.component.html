@@ -1,0 +1,42 @@
+<div class="container">
+
+  <ngx-form-progress-bar [form]="form" style="--progress-height: 20px; --progress-radius: 48px; --progress-color: blue; --success-color: green"></ngx-form-progress-bar>
+  
+  <form [formGroup]="form">
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="documentType">Document Type</label>
+        <select class="form-select" id="documentType" formControlName="documentType">
+          <option></option>
+          <option>PDF</option>
+          <option>Plain</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="documentName">Document Name</label>
+        <input type="text" id="documentName" formControlName="documentName">
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="category">Category</label>
+        <select id="category" formControlName="category">
+          <option></option>
+          <option>Audit</option>
+          <option>Application</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="email">Email</label>
+        <input type="email" id="email" formControlName="email">
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" [disabled]="form.invalid">Submit</button>
+    </div>
+
+  </form>
+</div>

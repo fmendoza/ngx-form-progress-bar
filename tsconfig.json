@@ -17,7 +17,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-form-progress-bar": [
+        "dist/ngx-form-progress-bar/ngx-form-progress-bar",
+        "dist/ngx-form-progress-bar"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
