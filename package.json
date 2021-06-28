@@ -1,15 +1,14 @@
 {
-  "name": "my-workspace",
+  "name": "ngx-form-progress-form",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~12.1.0",
     "@angular/common": "~12.1.0",
