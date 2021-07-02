@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NgxFormProgressBarComponentModule } from 'ngx-form-progress-bar';
+import { NgxFormProgressBarModule } from 'dist/ngx-form-progress-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    NgxFormProgressBarComponentModule,
+    NgxFormProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
