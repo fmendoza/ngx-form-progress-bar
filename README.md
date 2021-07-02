@@ -1,7 +1,7 @@
 <h3 align="center">ngx-form-progress-bar</h3>
 
 <p align="center">
-  Show a 
+  Add a progress bar to your Reactive Forms ⚡️ 
 </p>
 
 ## Table of Contents
@@ -54,6 +54,8 @@ export class MyAppModule {}
 
 ## Usage <a name="usage"></a>
 
+Add the `ngx-form-progress-bar` tag in your template. Don't forget to bind a FormGroup instance as an input property.
+
 ```javascript
 import { Component } from '@angular/core';
 import {  FormGroup, FormControl, Validators } from '@angular/forms';
@@ -85,7 +87,7 @@ export class CheckoutPage implements OnInit {
 
 ## 💅 CSS <a name="css"></a>
 
-Customize the progress bar with CSS variables
+Customize the progress bar with CSS variables.
 
 ```css
 ngx-form-progress-bar {
