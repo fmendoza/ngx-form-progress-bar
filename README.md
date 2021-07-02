@@ -14,7 +14,7 @@
 
 ## Demo <a name="demo"></a>
 
-Coming soon... 
+Try a live example on StackBlitz: https://ngx-form-progress-bar-demo.stackblitz.io
 
 ## Install <a name="install"></a>
 
