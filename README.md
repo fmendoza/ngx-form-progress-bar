@@ -1,27 +1,97 @@
-# MyWorkspace
+<h3 align="center">ngx-form-progress-bar</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+<p align="center">
+  Show a 
+</p>
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [Demo](#demo)
+- [Install](#install)
+- [Setup](#setup)
+- [Usage](#usage)
+- [CSS](#css)
 
-## Code scaffolding
+## Demo <a name="demo"></a>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Coming soon... 
 
-## Build
+## Install <a name="install"></a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To install the package, just run:
 
-## Running unit tests
+```
+$ npm install ngx-form-progress-bar
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+or the following if you are using yarn
 
-## Running end-to-end tests
+```
+$ yarn add ngx-form-progress-bar
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## 🛠 Setup
 
-## Further help
+Include the library in your module
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```javascript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+
+import { NgxFormProgressBarModule } from 'ngx-form-progress-bar'; // <-- import it
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NgxFormProgressBarModule, // <-- and include it
+  ],
+  bootstrap: [AppComponent],
+})
+export class MyAppModule {}
+```
+
+## Usage <a name="usage"></a>
+
+```javascript
+import { Component } from '@angular/core';
+import {  FormGroup, FormControl, Validators } from '@angular/forms';
+@Component({
+  selector: 'app-checkout',
+  template: `
+    <ngx-form-progress-bar [form]="form></ngx-form-progress-bar>
+    <form [formGroup]="form" novalidate>
+      <input type="text" formControlName="name">
+      <input type="email" formControlName="email">
+      <input type="tel" formControlName="phone">
+      <button type="submit">Submit</button>
+    </form>
+  `,
+})
+export class CheckoutPage implements OnInit {
+
+  public form: FormGroup;
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required),
+      phone: new FormControl('', Validators.required)
+    });
+  }
+}
+```
+
+## 💅 CSS <a name="css"></a>
+
+Customize the progress bar with CSS variables
+
+```css
+ngx-form-progress-bar {
+  --progress-height: 20px;
+  --progress-radius: 48px;
+  --progress-color: blue;
+  --success-color: green;
+}
+```
